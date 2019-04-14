@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.18
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -64,7 +64,12 @@
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#documentation">Documentation</a></li>
-<li><a href="#requirements">Requirements</a></li>
+<li><a href="#requirements">Requirements</a>
+
+<ul>
+<li><a href="#activejob">ActiveJob</a></li>
+<li><a href="#redis-namespace">redis-namespace</a></li>
+</ul></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#support-me">Support Me</a></li>
 <li><a href="#general-information">General Information</a></li>
@@ -134,9 +139,17 @@
 
 <h2>Requirements</h2>
 
-<p>See <a href="https://github.com/mperham/sidekiq#requirements">Sidekiq requirements</a> for what is required. Starting from 5.0.0 only sidekiq &gt;= 4 is supported and support for MRI &lt;= 2.1 is dropped. ActiveJob is not supported</p>
+<p>See <a href="https://github.com/mperham/sidekiq#requirements">Sidekiq requirements</a> for what is required. Starting from 5.0.0 only sidekiq &gt;= 4 and MRI &gt;= 2.2. ActiveJob is not supported</p>
 
-<p>Version 6 requires Redis &gt;= 3 and pure Sidekiq, no ActiveJob supported anymore. See <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/wiki/About-ActiveJob">About ActiveJob</a> for why.</p>
+<h3>ActiveJob</h3>
+
+<p>Version 6 requires Redis &gt;= 3 and pure Sidekiq, no ActiveJob supported anymore. See <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/wiki/About-ActiveJob">About ActiveJob</a> for why. It simply is too complex and generates more issues than I can handle given how little timer I have to spend on this project.</p>
+
+<h3>redis-namespace</h3>
+
+<p>Will not be officially supported anymore. Since Mike <a href="https://github.com/mperham/sidekiq/issues/3366#issuecomment-284270120">won&#39;t support redis-namespace</a> neither will I.</p>
+
+<p><a href="http://www.mikeperham.com/2017/04/10/migrating-from-redis-namespace/">Read this</a> for how to migrate away from namespacing.</p>
 
 <h2>Installation</h2>
 
@@ -536,9 +549,9 @@ already does this.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Thu Feb 28 21:57:50 2019 by
+  Generated on Sun Apr 14 22:28:48 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.18 (ruby-2.4.4).
+  0.9.19 (ruby-2.5.5).
 </div>
 
     </div>
